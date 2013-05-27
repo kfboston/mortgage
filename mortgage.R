@@ -32,9 +32,9 @@ mortgage <- function(asking.price=500000, pct.down=20, I=4, L=30, amort=T, plotD
 The payments for this loan are:\n 
     TOTAL MONTHLY COST: $", format(round(tot.month.cost,2),big.mark=",",digits=2,nsmall=2), "\n		
       Monthly mortgage payment: $", format(round(M,2),big.mark=","), " (stored in monthPay)\n
-      Condo fees: $", round(condofees,2), " (stored in condofees)\n
-      Monthly taxes: $", round(taxes.month,2) ," (stored in taxes.month)\n
-      Parking: $", round(parking,2) ," (stored in parking)\n
+      Condo fees: $", round(condofees,2), " \n
+      Monthly taxes: $", round(taxes.month,2) ," \n
+      Parking: $", round(parking,2) ," \n
     Total lifetime cost of mortgage: $", format(M*N,scientific=FALSE,big.mark=",",nsmall=2), "\n\n", sep="")
 	# Calculate Amortization for each Month
 	if(amort==T) {
@@ -93,5 +93,7 @@ The payments for this loan are:\n
 	}
 }
 
-mortgage(asking.price=599000, I=3.74, pct.down=20, condofees=580, 
-         taxes.year=4256, parking=0)
+mortgage(asking.price=582000, I=3.99, pct.down=20, condofees=477, 
+         taxes.year=3357, parking=150)
+
+
